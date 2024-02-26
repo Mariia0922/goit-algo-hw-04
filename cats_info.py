@@ -1,10 +1,112 @@
-cats = [
-    {"id": "60b90c1c13067a15887e1ae1", "name": "Tayson", "age": "3"},
-    {"id": "60b90c2413067a15887e1ae2", "name": "Vika", "age": "1"},
-    {"id": "60b90c2e13067a15887e1ae3", "name": "Barsik", "age": "2"},
-    {"id": "60b90c3b13067a15887e1ae4", "name": "Simon", "age": "12"},
-    {"id": "60b90c4613067a15887e1ae5", "name": "Tessi", "age": "5"},
-]
+def get_cats_info(path):
+    cats_list = []
+    with open(path, 'r') as file:
+        for line in file:
+            cat_id, name, age = line.strip().split(',')
+            cat_info = {'id': cat_id, 'name': name, 'age': int(age)}
+            cats_list.append(cat_info)
+    return cats_list
 
-def get_cats_info1():
-    return cats.strip().split('\n')
+cats_info = get_cats_info('cats_info.txt')
+
+print(cats_info)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""def get_cats_info(path):
+    cats_list = []
+    with open(path, 'r') as file:
+        for line in file:
+            
+            cat_id, name, age = line.strip().split(',')
+            
+            cat_info = {
+                'id': cat_id,
+                'name': name,
+                'age': int(age)  
+            }
+            
+            cats_list.append(cat_info)
+    return cats_list
+
+
+file_path = 'cats_info.txt'
+
+
+cats_info = get_cats_info(file_path)
+
+
+for cat in cats_info:
+    print(f"ID: {cat['id']}, Name: {cat['name']}, Age: {cat['age']}")"""
